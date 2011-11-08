@@ -1,0 +1,29 @@
+<h1>Listing myusers</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Tv-show</th>
+    <th>Season</th>
+    <th>Episode</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @myusers.each do |myuser| %>
+  <tr>
+    <td><%= myuser.user %></td>
+    <td><%= myuser.tv-show %></td>
+    <td><%= myuser.season %></td>
+    <td><%= myuser.episode %></td>
+    <td><%= link_to 'Show', myuser %></td>
+    <td><%= link_to 'Edit', edit_myuser_path(myuser) %></td>
+    <td><%= link_to 'Destroy', myuser, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Myuser', new_myuser_path %>

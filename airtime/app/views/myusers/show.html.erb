@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @myuser.user %>
+</p>
+
+<p>
+  <b>Tv-show:</b>
+  <%= @myuser.tv-show %>
+</p>
+
+<p>
+  <b>Season:</b>
+  <%= @myuser.season %>
+</p>
+
+<p>
+  <b>Episode:</b>
+  <%= @myuser.episode %>
+</p>
+
+
+<%= link_to 'Edit', edit_myuser_path(@myuser) %> |
+<%= link_to 'Back', myusers_path %>
