@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Episode</th>
     <th>Name</th>
     <th>Number</th>
     <th>Description</th>
@@ -12,6 +13,7 @@
 
 <% @episodes.each do |episode| %>
   <tr>
+    <td><%= episode.season_id %></td>
     <td><%= episode.name %></td>
     <td><%= episode.number %></td>
     <td><%= episode.description %></td>

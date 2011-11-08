@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Show</th>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @seasons.each do |season| %>
+  <tr>
+    <td><%= season.show_id %></td>
+    <td><%= season.name %></td>
+    <td><%= season.number %></td>
+    <td><%= season.description %></td>
+    <td><%= link_to 'Show', season %></td>
+    <td><%= link_to 'Edit', edit_season_path(season) %></td>
+    <td><%= link_to 'Destroy', season, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+  <% end %>
+
+</table>
