@@ -15,6 +15,9 @@
   <%= @show.date %>
 </p>
 
+<p>Seasons in the TV-Show:</p>
+ <%= render 'seasons/list' %>
+
 
 <%= link_to 'Edit', edit_show_path(@show) %> |
 <%= link_to 'Back', shows_path %>

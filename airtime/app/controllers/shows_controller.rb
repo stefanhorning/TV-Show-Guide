@@ -14,7 +14,7 @@ class ShowsController < ApplicationController
   # GET /shows/1.json
   def show
     @show = Show.find(params[:id])
-
+    @seasons = @show.seasons
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @show }
