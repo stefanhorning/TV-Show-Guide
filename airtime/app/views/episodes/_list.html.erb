@@ -1,10 +1,10 @@
 <table>
   <tr>
-    <th>Show</th>
-    <th>Season</th>
+    <th>Episode of Show</th>
+    <th>Episode of Season</th>
     <th>Name</th>
-    <th>Number</th>
-    <th>Description</th>
+    <th>Episode No</th>
+    <th>Airing Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,7 +16,7 @@
     <td><%= episode.season ? (link_to episode.season.name, season_path(episode.season)) : "" %></td>
     <td><%= episode.name %></td>
     <td><%= episode.number %></td>
-    <td><%= episode.description %></td>
+    <td><%= episode.date %></td>
     <td><%= link_to 'Show', episode %></td>
     <td><%= link_to 'Edit', edit_episode_path(episode) %></td>
     <td><%= link_to 'Destroy', episode, confirm: 'Are you sure?', method: :delete %></td>

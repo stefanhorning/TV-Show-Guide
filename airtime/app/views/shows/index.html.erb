@@ -1,10 +1,10 @@
-<h1>Listing shows</h1>
+<h1>Listing of all TV-Shows</h1>
 
-<table cellspacing="4px">
+<table>
   <tr>
-    <th>Name</th>
+    <th>TV-Show</th>
     <th>Description</th>
-    <th>Date</th>
+    <th>Opening Date</th>
     <th>Show ID</th>
     <th></th>
     <th></th>
@@ -15,7 +15,7 @@
   <tr>
     <td><%= show.name %></td>
     <td><%= show.description %></td>
-    <td><%= show.date %></td>
+    <td><%= show.date.year %></td>
     <td><%= show.id %></td>
     <td><%= link_to 'Show', show %></td>
     <td><%= link_to 'Edit', edit_show_path(show) %></td>

@@ -1,10 +1,10 @@
-<table cellspacing="4">
+<table>
   <tr>
-    <th>Show</th>
+    <th>Season of TV-Show</th>
     <th>Name</th>
     <th>Number</th>
     <th>Description</th>
-    <th>Season ID</th>
+    <th>Season Start Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,7 +16,7 @@
     <td><%= season.name %></td>
     <td><%= season.number %></td>
     <td><%= season.description %></td>
-    <td><%= season.id %></td>
+    <td><%= season.date %></td>
     <td><%= link_to 'Show', season %></td>
     <td><%= link_to 'Edit', edit_season_path(season) %></td>
     <td><%= link_to 'Destroy', season, confirm: 'Are you sure?', method: :delete %></td>
