@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>Show</th>
+    <th>Season</th>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @episodes.each do |episode| %>
+  <tr>
+    <td><%= episode.season.show ? (link_to episode.season.show.name, show_path(episode.season.show)) : "" %></td>
+    <td><%= episode.season ? (link_to episode.season.name, season_path(episode.season)) : "" %></td>
+    <td><%= episode.name %></td>
+    <td><%= episode.number %></td>
+    <td><%= episode.description %></td>
+    <td><%= link_to 'Show', episode %></td>
+    <td><%= link_to 'Edit', edit_episode_path(episode) %></td>
+    <td><%= link_to 'Destroy', episode, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

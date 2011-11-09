@@ -11,7 +11,7 @@
 
   <% @seasons.each do |season| %>
   <tr>
-    <td><%= season.show_id %></td>
+    <td><%= season.show ? (link_to season.show.name, show_path(season.show)) : "" %></td>
     <td><%= season.name %></td>
     <td><%= season.number %></td>
     <td><%= season.description %></td>
