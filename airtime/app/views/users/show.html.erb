@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Fname:</b>
-  <%= @user.fname %>
-</p>
+<h2>User Details</h2>
 
 <p>
-  <b>Lname:</b>
-  <%= @user.lname %>
+  <b>Name:</b>
+  <%= @user.fname %> <%= @user.lname %>
 </p>
-
 <p>
   <b>Email:</b>
   <%= @user.email %>
@@ -20,6 +16,8 @@
   <%= @user.password %>
 </p>
 
+<h3>List of subscribed shows:</h3>
+<p>TODO...</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

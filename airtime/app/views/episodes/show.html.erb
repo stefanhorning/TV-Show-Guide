@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2>[Show Name, Season No], Episode <%= @episode.number %> Details</h2>
+<h2><%= @episode.season.show ? (link_to @episode.season.show.name, show_path(@episode.season.show)) : "" %> > <%= @episode.season ? (link_to @episode.season.name, season_path(@episode.season)) : "" %> > Episode <%= @episode.number %> Details</h2>
 <p>
   <b>First Airing Date:</b>
   <%= @episode.date %>

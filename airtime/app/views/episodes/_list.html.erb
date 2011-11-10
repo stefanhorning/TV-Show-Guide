@@ -1,7 +1,5 @@
 <table>
   <tr>
-    <th>Episode of Show</th>
-    <th>Episode of Season</th>
     <th>Episode No</th>
     <th>Title</th>
     <th>Airing Date</th>
@@ -12,8 +10,6 @@
 
   <% @episodes.each do |episode| %>
   <tr>
-    <td><%= episode.season.show ? (link_to episode.season.show.name, show_path(episode.season.show)) : "" %></td>
-    <td><%= episode.season ? (link_to episode.season.name, season_path(episode.season)) : "" %></td>
     <td><%= episode.number %></td>
     <td><%= episode.name %></td>
     <td><%= episode.date %></td>
