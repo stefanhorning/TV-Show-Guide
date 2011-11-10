@@ -1,28 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Attributes of Season</h2>
+<h2>[TV-Show Name], Season <%= @season.number %></h2>
 <p>
-  <b>Full Name:</b>
-  <%= @season.name %>
+  <b>Full Name:</b> <%= @season.name %>
 </p>
-
-<p>
-  <b>Season Number:</b>
-  <%= @season.number %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @season.description %>
-</p>
-
 <p>
   <b>Season Start Date:</b>
   <%= @season.date %>
 </p>
-
-<p>Episodes in this Season:</p>
- <%= render 'episodes/list' %>
-
+<p>
+  <b>Description:</b>
+  <%= @season.description %>
+</p>
 <%= link_to 'Edit', edit_season_path(@season) %> |
 <%= link_to 'Back', seasons_path %>
+<br />
+
+<h3>Episodes in Season <%= @season.number %>:</h3>
+<%= render 'episodes/list' %>
+
+

@@ -1,24 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Episode Attributes</h2>
+<h2>[Show Name, Season No], Episode <%= @episode.number %> Details</h2>
 <p>
-  <b>Name:</b>
+  <b>First Airing Date:</b>
+  <%= @episode.date %>
+</p>
+<p>
+  <b>Title:</b>
   <%= @episode.name %>
 </p>
-
-<p>
-  <b>Number:</b>
-  <%= @episode.number %>
-</p>
-
 <p>
   <b>Description:</b>
   <%= @episode.description %>
-</p>
-
-<p>
-  <b>First Airing Date/Time:</b>
-  <%= @episode.date %>
 </p>
 
 <%= link_to 'Edit', edit_episode_path(@episode) %> |

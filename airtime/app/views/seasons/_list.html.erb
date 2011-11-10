@@ -1,8 +1,8 @@
 <table>
   <tr>
     <th>Season of TV-Show</th>
+    <th>Season No</th>
     <th>Name</th>
-    <th>Number</th>
     <th>Description</th>
     <th>Season Start Date</th>
     <th></th>
@@ -13,8 +13,8 @@
   <% @seasons.each do |season| %>
   <tr>
     <td><%= season.show ? (link_to season.show.name, show_path(season.show)) : "" %></td>
-    <td><%= season.name %></td>
     <td><%= season.number %></td>
+    <td><%= season.name %></td>
     <td><%= season.description %></td>
     <td><%= season.date %></td>
     <td><%= link_to 'Show', season %></td>
