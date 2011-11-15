@@ -11,9 +11,10 @@
     </div>
   <% end %>
 
-   <div class="field">
+
+  <div class="field">
     <%= f.label :show_id %><br />
-    <%= f.text_field :show_id %>
+    <%= collection_select(:season, :show_id, Show.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
