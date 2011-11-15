@@ -16,8 +16,8 @@
   <%= @user.password %>
 </p>
 
-<h3>List of subscribed shows:</h3>
-<p>TODO...</p>
-
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<h3>List of subscribed shows:</h3>
+<%= render 'subscribes/list' %>

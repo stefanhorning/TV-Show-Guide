@@ -1,25 +1,3 @@
 <h1>Listing subscribes</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Show</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @subscribes.each do |subscribe| %>
-  <tr>
-    <td><%= subscribe.user_id %></td>
-    <td><%= subscribe.show_id %></td>
-    <td><%= link_to 'Show', subscribe %></td>
-    <td><%= link_to 'Edit', edit_subscribe_path(subscribe) %></td>
-    <td><%= link_to 'Destroy', subscribe, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Subscribe', new_subscribe_path %>
+<%= render 'list' %>
