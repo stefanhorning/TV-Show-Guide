@@ -1,4 +1,6 @@
 Airtime::Application.routes.draw do
+  resources :subscribes
+
   resources :users
 
   resources :episodes
