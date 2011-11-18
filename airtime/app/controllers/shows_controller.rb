@@ -15,6 +15,8 @@ class ShowsController < ApplicationController
   def show
     @show = Show.find(params[:id])
     @seasons = @show.seasons
+    # @subscribes = @show.subscribes # if we want to use subscribes template instead of users
+    @users = @show.users # if we want to use users template
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @show }

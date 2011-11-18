@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @subscribes = @user.subscribes
+    #@shows = @user.shows   # if we want to use the show listing template instead of the subscribes
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
