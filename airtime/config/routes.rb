@@ -9,6 +9,19 @@ Airtime::Application.routes.draw do
 
   resources :shows
 
+  resources :user_sessions
+
+  #for users
+  scope :path => '/admin' do
+    resources :users #places all the "users" links behind /admin URL prefix
+  end
+ 
+  #for user_sessions
+  match "/admin"    => "admin#index"
+  get   "sign_in"   => "user_sessions#new"
+  post  "sign_in"   => "user_sessions#create"
+  match "sign_out"  => "user_sessions#destroy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
