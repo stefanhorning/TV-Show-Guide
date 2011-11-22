@@ -41,11 +41,6 @@ ActiveRecord::Schema.define(:version => 20111122001224) do
     t.date     "date"
   end
 
-  create_table "shows_users", :id => false, :force => true do |t|
-    t.integer "show_id"
-    t.integer "user_id"
-  end
-
   create_table "subscribes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "show_id"

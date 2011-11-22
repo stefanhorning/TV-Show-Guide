@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= collection_select(:subscribe, :user_id, User.all, :id, :fname) %>
+    <%= collection_select(:subscribe, :user_id, User.all, :id, :name) %>
+
   </div>
   <div class="field">
     <%= f.label :show_id %><br />

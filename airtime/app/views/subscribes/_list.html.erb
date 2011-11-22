@@ -1,7 +1,10 @@
+<p style="color:red;">Do not depend on this view (subscribes/_list.html.erb). Will be removed later! Only left in the System for debugging for now</p>
 <table>
   <tr>
     <th>User Name</th>
+    <th>User ID</th>
     <th>Show Name</th>
+    <th>Show ID</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,8 +12,10 @@
 
 <% @subscribes.each do |subscribe| %>
   <tr>
-    <td><%= subscribe.user ? (link_to subscribe.user.fname, show_path(subscribe.user)) : "" %></td>
+    <td><%= subscribe.user ? (link_to subscribe.user.fname, user_path(subscribe.user)) : "" %></td>
+    <td><%= subscribe.user_id %></td>
     <td><%= subscribe.show ? (link_to subscribe.show.name, show_path(subscribe.show)) : "" %></td>
+    <td><%= subscribe.show_id %></td>
     <td><%= link_to 'Show', subscribe %></td>
     <td><%= link_to 'Edit', edit_subscribe_path(subscribe) %></td>
     <td><%= link_to 'Destroy', subscribe, confirm: 'Are you sure?', method: :delete %></td>
