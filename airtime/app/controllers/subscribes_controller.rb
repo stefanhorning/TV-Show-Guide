@@ -1,4 +1,6 @@
 class SubscribesController < ApplicationController
+  before_filter :require_user
+
   # GET /subscribes
   # GET /subscribes.json
   def index
