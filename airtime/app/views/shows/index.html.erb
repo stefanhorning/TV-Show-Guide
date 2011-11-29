@@ -1,5 +1,12 @@
 <h1>Listing of all TV-Shows</h1>
 
+    <%= form_tag shows_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+
 <table>
   <tr>
     <th>TV-Show</th>
@@ -25,5 +32,5 @@
 </table>
 
 <br />
-
 <%= link_to 'New Show', new_show_path %>
+
