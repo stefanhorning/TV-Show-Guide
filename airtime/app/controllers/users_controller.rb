@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :require_user, :except => [:new, :create]
+  
   # GET /users
   # GET /users.json
   def index
@@ -14,7 +16,8 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-
+    @shows = @user.shows
+    #@shows = @user.shows   # if we want to use the show listing template instead of the subscribes
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

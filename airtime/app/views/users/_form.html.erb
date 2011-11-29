@@ -12,11 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :fname %><br />
+    <%= f.label "Combined name" %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Firstname" %><br />
     <%= f.text_field :fname %>
   </div>
   <div class="field">
-    <%= f.label :lname %><br />
+    <%= f.label "Lastname" %><br />
     <%= f.text_field :lname %>
   </div>
   <div class="field">
@@ -24,11 +28,16 @@
     <%= f.email_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, f.object.new_record? ? nil : "Change password" %><br />
     <%= f.password_field :password %>
   </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %><br />
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save" %>
   </div>
 
 <% end %>
