@@ -2,10 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
     background-color: #e2e4e8;
 }
 
 table {
     border-spacing: 6px;
+}
+
+#search, #user_nav{
+float: left;
 }
