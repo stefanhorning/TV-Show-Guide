@@ -19,10 +19,10 @@
       <%= link_to "Register", new_user_path %> |
       <%= link_to "Login", sign_in_path %> |
     <% end %>
-      <%= form_tag shows_path, :method => 'get' do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
   </p>
+ <%= form_tag shows_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %> 
  <% end %>
 </div>
 
