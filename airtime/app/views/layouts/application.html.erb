@@ -17,10 +17,13 @@
       <%= link_to "Logout", sign_out_path %>
     <% else %>
       <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", sign_in_path %>
-    <% end %> |
-    TODO: Search
+      <%= link_to "Login", sign_in_path %> |
+    <% end %>
+      <%= form_tag shows_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
   </p>
+ <% end %>
 </div>
 
 <%= yield %>
