@@ -16,8 +16,17 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @shows = @user.shows
-    #@shows = @user.shows   # if we want to use the show listing template instead of the subscribes
+    # stuff for the episodes / shows listing:
+    @shows = @user.shows  # find shows with relation to the user (subscribed), returns array
+    @episodes = Array.new # instanciate episodes array
+    for i in 0...@shows.size   # loop through the shows array
+      episodes_for_show = @shows[i].episodes # get episodes for selected show (through=>seasons, see model), returns array
+      for j in 0...episodes_for_show.size # loop through episodes array
+            @episodes.push( episodes_for_show[j] ) # add episode elements to episodes array
+      end
+    end
+    @episodes = @episodes.sort_by(&:date) # sort episodes by date
+    # end stuff
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }

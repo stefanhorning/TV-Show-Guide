@@ -13,7 +13,7 @@
     <%= link_to "TV Shows", shows_path %> |
     <% if current_user %>
       Hello <%= current_user.name %> |
-      <%= link_to "Edit Profile", edit_user_path(current_user) %> |
+      <%= link_to "Dashboard", user_path(current_user) %> |
       <%= link_to "Logout", sign_out_path %>
     <% else %>
       <%= link_to "Register", new_user_path %> |

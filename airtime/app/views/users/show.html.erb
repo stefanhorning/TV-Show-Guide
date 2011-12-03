@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h2>User Details</h2>
+<h2>Dashboard</h2>
 
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
-  <%= @user.fname %> <%= @user.lname %>
-</p>
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <b>Short Name:</b> <%= @user.name %><br />
+  <b>Full Name:</b> <%= @user.fname %> <%= @user.lname %><br />
+  <b>Email:</b> <%= @user.email %><br />
 </p>
 
 <p> 
@@ -46,6 +42,10 @@
 <%= link_to 'Back', users_path %>
 
 <h3>List of subscribed shows:</h3>
-<%= render 'shows/list' %>
+<%=  render 'shows/list' %>
+
+<h3>List of upcoming episodes:</h3>
+<%=  render 'episodes/list' %>
+
 
 <%= link_to 'Add Show', new_subscribe_path %>

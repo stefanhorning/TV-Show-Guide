@@ -10,7 +10,8 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_to admin_path
+      # redirect_to admin_path
+      redirect_to root_url  # how to route to users_path(current_user)?
     else
       render :action => :new
     end
