@@ -7,45 +7,26 @@
   <b>Full Name:</b> <%= @user.fname %> <%= @user.lname %><br />
   <b>Email:</b> <%= @user.email %><br />
 </p>
-
-<p> 
-  <b>Login count:</b>
-  <%= @user.login_count %>
-</p>
-
 <p>
-  <b>Last request at:</b>
-  <%=h @user.last_request_at %>
-</p>
-
-<p>
-  <b>Last login at:</b>
-  <%=h @user.last_login_at %>
-</p>
-
-<p>
-  <b>Current login at:</b>
-  <%=h @user.current_login_at %>
-</p>
-
-<p>
-  <b>Last login ip:</b>
-  <%=h @user.last_login_ip %>
-</p>
-
-<p>
-  <b>Current login ip:</b>
-  <%=h @user.current_login_ip %>
+  <b>Debugging stuff..</b><br />
+  <b>Login count:</b> <%= @user.login_count %><br />
+  <b>Last request at:</b> <%=h @user.last_request_at %><br />
+  <b>Last login at:</b> <%=h @user.last_login_at %><br />
+  <b>Current login at:</b> <%=h @user.current_login_at %><br />
+  <b>Last login ip:</b> <%=h @user.last_login_ip %><br />
+  <b>Current login ip:</b> <%=h @user.current_login_ip %><br />
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
-<h3>List of subscribed shows:</h3>
-<%=  render 'shows/list' %>
+<h3>List of subscribed shows (only visible for testing):</h3>
+<%=  render 'shows/list_userview' %>
+<%= link_to 'Add a new show', new_subscribe_path %>
+<p>TODO: Delete subscriptions somehow</p>
+
 
 <h3>List of upcoming episodes:</h3>
-<%=  render 'episodes/list' %>
+<%=  render 'episodes/list_userview' %>
 
 
-<%= link_to 'Add Show', new_subscribe_path %>

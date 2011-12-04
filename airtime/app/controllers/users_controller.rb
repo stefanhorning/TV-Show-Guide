@@ -25,7 +25,7 @@ class UsersController < ApplicationController
             @episodes.push( episodes_for_show[j] ) # add episode elements to episodes array
       end
     end
-    @episodes = @episodes.sort_by(&:date) # sort episodes by date
+    @episodes = @episodes.sort_by(&:date).reverse # sort episodes by date, newest first
     # end stuff
     respond_to do |format|
       format.html # show.html.erb

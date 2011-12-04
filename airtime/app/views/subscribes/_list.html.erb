@@ -18,11 +18,11 @@
     <td><%= subscribe.show_id %></td>
     <td><%= link_to 'Show', subscribe %></td>
     <td><%= link_to 'Edit', edit_subscribe_path(subscribe) %></td>
-    <td><%= link_to 'Destroy', subscribe, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Unsubscribe', subscribe, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Subscribe', new_subscribe_path %>
+<%= link_to 'New Subscription', new_subscribe_path %>

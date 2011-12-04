@@ -1,0 +1,9 @@
+<table>
+<% @shows.each do |show| %>
+  <tr>
+    <td><%= link_to show.name, show %></td>
+    <td><%= show.description %></td>
+    <td><%= show.date.year %></td>
+  </tr>
+<% end %>
+</table>

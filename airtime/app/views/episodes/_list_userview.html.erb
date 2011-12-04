@@ -1,0 +1,13 @@
+<table>
+  <% @episodes.each do |episode| %>
+  <tr>
+    <td><%= episode.date.day %>.<%= episode.date.month %>.<%= episode.date.year %></td>
+    <td><%= episode.season.show.name %></td>
+    <td>S<%= episode.season.number %></td>
+    <td><%= link_to "Episode " + episode.number.to_s, episode %>
+    </td>
+    <td>Name <%= episode.name %></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>

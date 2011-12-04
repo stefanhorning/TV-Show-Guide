@@ -9,7 +9,9 @@ class ShowsController < ApplicationController
   # GET /shows/1.json
   def show
     @show = Show.find(params[:id])
-    @seasons = @show.seasons
+    @seasons = @show.seasons # get seasons of this show
+    @episodes = @show.episodes # get episodes of this show (through seasons)
+    @episodes = @episodes.sort_by(&:date).reverse    # sort by date for now. TODO: Should be sorted by Season and Episode numbers
     # @subscribes = @show.subscribes # if we want to use subscribes template instead of users
     @users = @show.users # if we want to use users template
     respond_to do |format|

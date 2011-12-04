@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <h2>TV-Show "<%= @show.name %>"</h2>
-<p>
-  <b>Started on:</b> <%= @show.date %>
-</p>
-<p>
+
+<div id="coverart">
+  <%= image_tag("covers/show-00001.jpg", :alt => "Series Cover") %>
+</div>
+
+<p class="description">
+  <b>Started on:</b> <%= @show.date.month %>/<%= @show.date.year %><br />
   <b>Description:</b> <%= @show.description %>
 </p>
 
-<%= link_to 'Edit', edit_show_path(@show) %> |
-<%= link_to 'Back', shows_path %>
+
+<br />
+<br />
+<br />
 <br />
 
 <h3><%= @show.name %> has the following Seasons:</h3>
 <%= render 'seasons/list' %>
+
+
+<h3>Episodes Overview:</h3>
+<%= render 'episodes/list_userview' %>
+
 
 <h3>Following Users have added this Show:</h3>
 <%= render 'users/list' %>

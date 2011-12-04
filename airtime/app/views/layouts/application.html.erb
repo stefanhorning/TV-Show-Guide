@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<div id="wrapper">
+
+<div id="header">
 <div id="user_nav">
   <p>
     <%= link_to "TV Shows", shows_path %> |
@@ -22,18 +25,20 @@
   </p>
 </div>
 
-
 <div id="search">
  <%= form_tag shows_path, :method => 'get' do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
  <% end %>
 </div>
-
 <div style="clear:both;"></div>
+</div>
+
 
 
 <%= yield %>
+
+</div>
 
 </body>
 </html>
