@@ -3,7 +3,7 @@
 <h2>TV-Show "<%= @show.name %>"</h2>
 
 <div id="coverart">
-  <%= image_tag("covers/show-00001.jpg", :alt => "Series Cover") %>
+  <%= image_tag("covers/show-"+@show.id.to_s+".jpg", :alt => "Series Cover") %>
 </div>
 
 <p class="description">
