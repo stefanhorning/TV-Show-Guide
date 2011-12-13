@@ -28,10 +28,11 @@ shows = Show.create([{ name: 'South Park', description: 'South Park is an Americ
  	{ name: 'Cartman Gets an Anal Probe', number: '1', season_id: '1', description: 'Cartman Gets an Anal Probe is the first episode of the animated television series South Park. It first aired on Comedy Central', date: '1997-08-13'},
  	{ name: 'Weight Gain 4000', number: '2', season_id: '1', description: 'Weight Gain 4000 is the second episode of the first season of the animated television series South Park. It first aired on Comedy Central in the United States on August 20, 1997.', date: '1997-08-20'},
  	{ name: 'Volcano', number: '3', season_id: '1', description: '"Volcano" is the third episode of the animated television series South Park. It originally aired on Comedy Central in the United States on August 27, 1997. In the episode, the four main characters, Stan, Kyle, Cartman and Kenny, go on a hunting trip with Stan\'s uncle Jimbo and his war buddy Ned.', date: '1997-08-27'},
- 	{ name: 'Big Gay Al\'s Big Gay Boat Ride', number: '3', season_id: '1', description: 'Big Gay Al\'s Big Gay Boat Ride is the fourth episode of the first season of the animated television series South Park. It originally aired on September 3, 1997 on Comedy Central in the United States. The episode was written by series co-founders Trey Parker and Matt Stone, and directed by Parker.', date: '1997-09-03'},
- 	{ name: 'Fancy New Episode', number: '4', season_id: '2', description: 'A nice episode of Southpark, blubb...', date: '2017-09-03'},
- 	{ name: 'Some Episode', number: '5', season_id: '2', description: 'A nice episode of Southpark, blubb...', date: '2012-09-03'},
-  { name: 'Some Episode', number: '5', season_id: '2', description: 'A nice episode of Southpark, blubb...', date: '2012-09-12'},
-  { name: 'Dexter Episode', number: '5', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-09-03'},
-  { name: 'Dexter Episode', number: '5', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-09-12'}
+ 	{ name: 'Big Gay Al\'s Big Gay Boat Ride', number: '4', season_id: '1', description: 'Big Gay Al\'s Big Gay Boat Ride is the fourth episode of the first season of the animated television series South Park. It originally aired on September 3, 1997 on Comedy Central in the United States. The episode was written by series co-founders Trey Parker and Matt Stone, and directed by Parker.', date: '1997-09-03'},
+ 	{ name: 'Fancy New Episode', number: '1', season_id: '2', description: 'A nice episode of Southpark, blubb...', date: '2017-09-03'},
+ 	{ name: 'Some Episode', number: '2', season_id: '2', description: 'A nice episode of Southpark, blubb...', date: '2012-09-03'},
+  { name: 'Some Episode', number: '3', season_id: '2', description: 'A nice episode of Southpark, blubb...', date: '2012-09-12'},
+  { name: 'Dexter Episode', number: '1', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-12-03'},
+  { name: 'Dexter Episode', number: '2', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-12-09'},
+  { name: 'Dexter Episode', number: '3', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-12-14'}
  ])
