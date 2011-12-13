@@ -1,4 +1,6 @@
 Airtime::Application.routes.draw do
+  resources :roles
+
   resources :subscribes
 
   resources :users

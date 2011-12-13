@@ -16,8 +16,16 @@
     <td><%= season.description %></td>
     <td><%= season.date %></td>
     <td><%= link_to 'Show', season %></td>
-    <td><%= link_to 'Edit', edit_season_path(season) %></td>
-    <td><%= link_to 'Destroy', season, confirm: 'Are you sure?', method: :delete %></td>
+    <td>
+      <% permitted_to? :edit, :season do %>
+        <%= link_to 'Edit', edit_season_path(season) %>
+      <% end %>
+    </td>
+    <td>
+      <% permitted_to? :destroy, :season do %>
+        <%= link_to 'Destroy', season, confirm: 'Are you sure?', method: :delete %>
+      <% end %>
+    </td>
   </tr>
   <% end %>
 
@@ -25,7 +33,10 @@
 
 <br />
 
-<%= link_to 'New Season', new_season_path %>
+<% permitted_to? :create, :season do %>
+  <%= link_to 'New Season', new_season_path %>
+<% end %>
+
 
 <br />
 <br />

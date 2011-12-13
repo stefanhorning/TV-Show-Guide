@@ -15,5 +15,7 @@
   <%= @episode.description %>
 </p>
 
-<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<% permitted_to? :edit, :episode do %>
+	<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<% end %>
 <%= link_to 'Back', episodes_path %>

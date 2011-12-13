@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :require_user, :except => [:new, :create]
+  # filter_resource_access
+  # before_filter :require_user, :except => [:new, :create]
   
   # GET /users
   # GET /users.json
@@ -52,6 +53,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
+    
 
     respond_to do |format|
       if @user.save
@@ -62,6 +64,8 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+
+    Role.create(:title => "logged_in_user", :user_id => @user.id)
   end
 
   # PUT /users/1

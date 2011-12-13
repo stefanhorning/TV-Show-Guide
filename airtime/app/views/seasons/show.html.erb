@@ -12,7 +12,9 @@
   <b>Description:</b>
   <%= @season.description %>
 </p>
-<%= link_to 'Edit', edit_season_path(@season) %> |
+<% permitted_to? :edit, :season do %>
+	<%= link_to 'Edit', edit_season_path(@season) %> |
+<% end %>
 <%= link_to 'Back', seasons_path %>
 <br />
 

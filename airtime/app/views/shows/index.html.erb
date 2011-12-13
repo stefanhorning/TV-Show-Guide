@@ -1,9 +1,9 @@
 <h1>Listing of all TV-Shows</h1>
 
-
-
 <%= render 'list' %>
 
 <br />
 
-<%= link_to 'New Show', new_show_path %>
+<% permitted_to? :create, :show do %>
+	<%= link_to 'New Show', new_show_path %>
+<% end %>

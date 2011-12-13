@@ -1,4 +1,11 @@
 class ApplicationController < ActionController::Base
+  # filter_resource_access
+  before_filter :set_current_user
+  protected
+  def set_current_user
+    Authorization.current_user = current_user
+  end
+
   protect_from_forgery
   helper_method :current_user_session, :current_user
 
