@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'execjs' # added by stefan
 gem 'therubyracer' # added by stefan
 gem 'authlogic' # authentication added by jochn
+gem 'cancan' # cancan authorization added by jochn
 
 # Gems used only for assets and not required
 # in production environments by default.

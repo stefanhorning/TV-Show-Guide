@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
 	validates :name, :email, :presence => true
 	validates :email, :uniqueness => true
 
+	# roles
+	ROLES = %w[admin loggedin guest banned]
+	def is?(role)
+  	roles.include?(role.to_s)
+	end
+
 end
