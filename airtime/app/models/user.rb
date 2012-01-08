@@ -7,9 +7,19 @@ class User < ActiveRecord::Base
 	validates :email, :uniqueness => true
 
 	# roles
-	ROLES = %w[admin loggedin guest banned]
-	def is?(role)
+	ROLES = %w[admin loggedin]
+
+	def role?(role)
   	roles.include?(role.to_s)
 	end
+
+	# def role_symbols
+ #    [role.to_sym]
+ #  end
+
+	# def roles?(role)
+	# 	roles.include?(role.to_s)
+ #      # return !!self.roles.find_by_name(role.to_s.camelize)
+ #  end
 
 end

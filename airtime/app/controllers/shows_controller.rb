@@ -1,4 +1,6 @@
 class ShowsController < ApplicationController
+  load_and_authorize_resource
+  
   # GET /shows
   # GET /shows.json
   def index

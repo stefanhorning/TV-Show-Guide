@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(:version => 20120107155419) do
     t.datetime "date"
   end
 
-  create_table "roles", :force => true do |t|
-    t.string   "title"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "seasons", :force => true do |t|
     t.string   "name"
     t.integer  "number"

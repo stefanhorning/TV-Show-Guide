@@ -36,8 +36,12 @@
     <%= f.password_field :password_confirmation %><br />
   </div>
 
-  # assign the "loggedin" role to the current user 
-  # right HERE
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.collection_select :role, User::ROLES, :to_s, :titleize %>
+    <!-- <%= hidden_field_tag @user.role='loggedin' %> -->
+    <!-- assign the "loggedin" role to the current user right HERE -->
+  </div>
 
   <div class="actions">
     <%= f.submit "Save" %>

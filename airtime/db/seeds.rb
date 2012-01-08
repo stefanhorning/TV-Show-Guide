@@ -36,3 +36,5 @@ shows = Show.create([{ name: 'South Park', description: 'South Park is an Americ
   { name: 'Dexter Episode', number: '2', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-12-09'},
   { name: 'Dexter Episode', number: '3', season_id: '3', description: 'A nice episode of Dexter, blubb...', date: '2011-12-14'}
  ])
+
+ users = User.create(:name => "admin", :password => "admin", :password_confirmation => "admin", :email => "admin@abc.com", :role => "admin")
