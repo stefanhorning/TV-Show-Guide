@@ -10,6 +10,7 @@ gem 'execjs' # added by stefan
 gem 'therubyracer' # added by stefan
 gem 'authlogic' # authentication added by jochn
 gem 'cancan' # cancan authorization added by jochn
+gem 'rspec-rails' # rspec testing framework, added by stefan
 
 # Gems used only for assets and not required
 # in production environments by default.
