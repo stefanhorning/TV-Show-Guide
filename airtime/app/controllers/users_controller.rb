@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   before_filter :require_user, :except => [:new, :create]
   
   # GET /users

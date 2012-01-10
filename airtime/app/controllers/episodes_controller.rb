@@ -1,4 +1,6 @@
 class EpisodesController < ApplicationController
+  load_and_authorize_resource
+  
   # GET /episodes
   # GET /episodes.json
   def index
