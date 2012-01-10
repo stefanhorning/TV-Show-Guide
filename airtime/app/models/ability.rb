@@ -35,7 +35,7 @@ class Ability
       can :destroy, [User, UserSession], :user_id => user.id
       can :manage, Subscribe, :user_id => user.id
     else
-      can :read, :all #[:episodes, :seasons, :shows]
+      can :read, [Episode, Season, Show]
       can [:create, :new], [User, UserSession]
     end
 
