@@ -15,7 +15,7 @@
   <p>
     <%= link_to "TV Shows", shows_path %> |
     <% if current_user %>
-      Hello <%= current_user.name %> |
+      Hello <%= link_to current_user.name, user_path(current_user) %> |
       <%= link_to "Dashboard", user_path(current_user) %> |
       <%= link_to "Logout", sign_out_path %>
     <% else %>

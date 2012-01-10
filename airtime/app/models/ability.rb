@@ -28,8 +28,15 @@ class Ability
     user ||= User.new # guest user (not logged in)
     if user.role == 'admin'
       can :manage, :all
+    elsif user.role == 'loggedin'
+      can :read, [Episode, Season, Show]
+      can :read, User, :user_id => user.id
+      # cannot :read, [:users, :user_sessions]
+      can :destroy, [User, UserSession], :user_id => user.id
+      can :manage, Subscribe, :user_id => user.id
     else
-      can :read, :all
+      can :read, :all #[:episodes, :seasons, :shows]
+      can [:create, :new], [User, UserSession]
     end
 
   end
