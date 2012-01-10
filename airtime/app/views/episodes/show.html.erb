@@ -15,5 +15,7 @@
   <%= @episode.description %>
 </p>
 
-<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<% if can? :update, :episode %>
+	<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<% end %>
 <%= link_to 'Back', episodes_path %>
