@@ -5,12 +5,14 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg' # use postgresql instead of sqlite (which is not supported by sphinx)
 gem 'execjs' # added by stefan
 gem 'therubyracer' # added by stefan
 gem 'authlogic' # authentication added by jochn
 gem 'cancan' # cancan authorization added by jochn
 gem 'rspec-rails' # rspec testing framework, added by stefan
+gem 'thinking-sphinx', '2.0.10' # sphinx search engine, added by stefan
 
 # Gems used only for assets and not required
 # in production environments by default.

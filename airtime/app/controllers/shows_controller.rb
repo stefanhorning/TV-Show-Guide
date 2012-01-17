@@ -4,7 +4,8 @@ class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
   def index
-    @shows = Show.search(params[:search])       #search
+   # @shows = Show.search(params[:search])       #search
+     @shows = Show.search params[:search],  :star => true
   end
 
   # GET /shows/1
