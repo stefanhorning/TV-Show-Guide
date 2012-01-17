@@ -11,7 +11,6 @@ gem 'execjs' # added by stefan
 gem 'therubyracer' # added by stefan
 gem 'authlogic' # authentication added by jochn
 gem 'cancan' # cancan authorization added by jochn
-gem 'rspec-rails' # rspec testing framework, added by stefan
 gem 'thinking-sphinx', '2.0.10' # sphinx search engine, added by stefan
 
 # Gems used only for assets and not required
@@ -39,4 +38,15 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+end
+
+group :test, :development do
+  gem "rspec-rails", ">= 2.7.0" # rspec testing framework, added by stefan
+  # make the whole teststuff work (added by stefan):
+  gem "factory_girl_rails", ">= 1.3.0"
+  gem "cucumber-rails", ">= 1.1.1"
+  gem "capybara", ">= 1.1.1"
+  gem "database_cleaner", ">= 0.6.7"
+  gem "launchy", ">= 2.0.5"
+  gem "devise", ">= 1.4.9"
 end
