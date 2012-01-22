@@ -14,8 +14,8 @@ development:
   database: airtime_development
   pool: 5
   timeout: 5000
-  username: stefan #postgresql user
-  password:
+  username: jochen_knaack #postgresql user
+  password: 1234
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,7 +27,7 @@ test:
   database: airtime_test
   pool: 5
   timeout: 5000
-  username: stefan #postgresql user
+  username: jochen_knaack #postgresql user
 
 production:
   #adapter: sqlite3
@@ -36,4 +36,4 @@ production:
   database: db/airtime_production
   pool: 5
   timeout: 5000
-  username: stefan #postgresql user
+  username: jochen_knaack #postgresql user
