@@ -13,6 +13,8 @@ gem 'authlogic' # authentication added by jochn
 gem 'cancan' # cancan authorization added by jochn
 gem 'thinking-sphinx', '2.0.10' # sphinx search engine, added by stefan
 
+gem 'ruby-debug19' #debugging tool
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

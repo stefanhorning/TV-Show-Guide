@@ -11,6 +11,18 @@
   <b>Description:</b> <%= @show.description %>
 </p>
 
+<!-- current_user: <%= simple_format current_user.id.to_yaml %>
+all Subscribe: <%= simple_format Subscribe.all.to_yaml %> 
+first Subscribe: <%= simple_format (Subscribe.find(1)).to_yaml %> -->
+Subscribe where user id is 'current_user.id' AND show_id is '@show.id': <%= simple_format (Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id)).to_yaml %> 
+
+<!-- Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id).blank? -->
+
+<% if true %>
+	<% link_to 'Subscribe', shows_path %>
+<% else %>
+	<% link_to 'bla', shows_path %>
+<% end %>
 
 <br />
 <br />
