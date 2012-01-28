@@ -13,7 +13,7 @@
 
 
 <% if current_user %>
-
+ <% # Should use find here: %>
 <% @subscription = Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id) #find existing subscription %>
 
 <% if @subscription.blank? #if no subscription is found %>
@@ -21,7 +21,7 @@
 
 <% else %>
     <p>You already subscribed to this show. Subscription ID: <%= @subscription.id.to_s %></p>
-    <%= link_to 'Unsubscribe', subscribe_path(@subscription.id), :confirm => "Are you sure?", :method => :delete %>
+    <%= link_to 'Unsubscribe', subscribe_path(@subscription[id] # should get id), :confirm => "Are you sure?", :method => :delete %>
 <% end %>
 
 <% end %>
