@@ -11,17 +11,19 @@
   <b>Description:</b> <%= @show.description %>
 </p>
 
-<!-- current_user: <%= simple_format current_user.id.to_yaml %>
-all Subscribe: <%= simple_format Subscribe.all.to_yaml %> 
-first Subscribe: <%= simple_format (Subscribe.find(1)).to_yaml %> -->
-Subscribe where user id is 'current_user.id' AND show_id is '@show.id': <%= simple_format (Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id)).to_yaml %> 
 
-<!-- Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id).blank? -->
+<% if current_user %>
 
-<% if true %>
-	<% link_to 'Subscribe', shows_path %>
+<% @subscription = Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id) #find existing subscription %>
+
+<% if @subscription.blank? #if no subscription is found %>
+    <p>No subscription yet.</p>
+
 <% else %>
-	<% link_to 'bla', shows_path %>
+    <p>You already subscribed to this show. Subscription ID: <%= @subscription.id.to_s %></p>
+    <%= link_to 'Unsubscribe', subscribe_path(@subscription.id), :confirm => "Are you sure?", :method => :delete %>
+<% end %>
+
 <% end %>
 
 <br />
