@@ -9,3 +9,4 @@ doc/
 *~ .DS_Store
 development.sphinx.conf
 database.yml
+airtime/config/database.yml
