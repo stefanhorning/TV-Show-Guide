@@ -12,6 +12,9 @@ Airtime::Application.routes.draw do
   resources :user_sessions
 
   #for users
+  # match "/users/:id" => "users#show"
+  # match "/profile" => "users#show"
+
   scope :path => '/admin' do
     resources :users #places all the "users" links behind /admin URL prefix
   end

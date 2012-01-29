@@ -12,7 +12,8 @@ class UserSessionsController < ApplicationController
     if @user_session.save
       flash[:notice] = "Login successful!"
       # redirect_to admin_path
-      redirect_to user_path(1)  # TODO: how to route to user_path(current_user)?
+      # @user = User.find_by_email(params[:email])
+      redirect_to root_url # user_path(@user.id) # :back  # TODO: how to route to user_path(current_user)?
     else
       render :action => :new
     end
