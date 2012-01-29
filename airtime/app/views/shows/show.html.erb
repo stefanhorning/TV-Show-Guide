@@ -15,7 +15,7 @@
 <% if current_user %>
 <% if Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id).blank? #if no subscription is found %>
     <p>No subscription yet.</p>
-    <%= link_to 'Subscribe',  %>
+    <%= link_to 'Subscribe', new_subscribe_path %>
 <% else %>
     <% @subscription = Subscribe.find(:all, :conditions => "user_id = "+current_user.id.to_s+" AND show_id = "+@show.id.to_s+"") %>
     <% @one_subscription = @subscription[0] # take first element in result array %>
