@@ -40,3 +40,41 @@ a#logo {
       #user_nav li a:hover {
         text-decoration: underline;
         background-color: none; }
+
+a.buttonSubscribe {
+  background: #589c00;
+  padding: 9.5px 19px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: #ffffff;
+  font-size: 18px;
+  /*font-family: Helvetica, Arial, Sans-Serif;*/
+  text-decoration: none;
+  vertical-align: middle; }
+
+a.buttonSubscribe:hover {
+  border-top-color: #6bbd00;
+  background: #6bbd00;
+  color: #ffffff; }
+
+a.buttonSubscribe:active {
+  border-top-color: #6bbd00;
+  background: #6bbd00; }
+
+a.buttonUnsubscribe {
+  background: #9c0000;
+  padding: 9.5px 19px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: #ffffff;
+  font-size: 18px;
+  /*font-family: Helvetica, Arial, Sans-Serif;*/
+  text-decoration: none;
+  vertical-align: middle; }
+
+a.buttonUnsubscribe:hover {
+  border-top-color: #bd0000;
+  background: #bd0000;
+  color: #ffffff; }
+
+a.buttonUnsubscribe:active {
+  border-top-color: #bd0000;
+  background: #bd0000; }
