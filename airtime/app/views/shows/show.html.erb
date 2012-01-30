@@ -18,6 +18,8 @@
 <!-- <h3><%= @show.name %> has the following Seasons:</h3>
 <%= render 'seasons/list' %> -->
 
+<div id="add_Info" >
+
 <h2 class="title"><%= @show.name %></h2>
 <p class="subscription">
   <% if current_user %>
@@ -33,7 +35,12 @@
     <% end %>
   <% end %>
   </p>
+<br><br><br>
 
 <h3>Episodes Overview:</h3>
 <%= render 'episodes/list_showview' %>
 </div>
+
+</div>
+
+

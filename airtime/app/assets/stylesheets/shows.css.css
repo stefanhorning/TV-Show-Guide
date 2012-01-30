@@ -89,7 +89,7 @@ td {
     float: left;
     margin: 15px 20px 20px 20px; }
   #show-single .subscription {
-    float: left;
-    margin: 20px 0px 0px 30px; }
+    float: right;
+    margin: 18px 200px 0px 30px; }
   #show-single .buttonSubscribe {
     /*margin: 20px 0px 40px 20px;*/ }
