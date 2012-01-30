@@ -12,14 +12,12 @@ Airtime::Application.routes.draw do
   resources :user_sessions
 
   #for users
-  # match "/users/:id" => "users#show"
-  # match "/profile" => "users#show"
-
   scope :path => '/admin' do
     resources :users #places all the "users" links behind /admin URL prefix
   end
  
   #for user_sessions
+  match '/dashboard', :controller => 'users', :action => 'show'
   match "/admin"    => "admin#index"
   get   "sign_in"   => "user_sessions#new"
   post  "sign_in"   => "user_sessions#create"
@@ -74,7 +72,8 @@ Airtime::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'shows#index'
+  root :to => 'users#show'
+  # root :to => 'home'
 
   # See how all your routes lay out with "rake routes"
 

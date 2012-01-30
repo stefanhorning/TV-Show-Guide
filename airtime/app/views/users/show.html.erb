@@ -17,12 +17,11 @@
   <b>Current login ip:</b> <%=h @user.current_login_ip %><br />
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit your profile', edit_user_path(@user) %>
 
-<h3>List of subscribed shows (only visible for testing):</h3>
+<h3>List of subscribed shows (only visible for testing (why?)):</h3>
 <%=  render 'shows/list_userview' %>
-<%= link_to 'Subscribe a new show', new_subscribe_path %>
+<%= link_to 'Subscribe a new show', shows_path %>
 <p>TODO: Delete subscriptions somehow</p>
 
 

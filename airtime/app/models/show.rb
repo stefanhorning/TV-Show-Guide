@@ -1,7 +1,7 @@
 class Show < ActiveRecord::Base
-  has_many :subscribes
+  has_many :subscribes, :dependent => :delete_all
   has_many :users, :through => :subscribes
-  has_many :seasons
+  has_many :seasons, :dependent => :delete_all
   has_many :episodes, :through => :seasons
 
   # simple search (old):

@@ -15,7 +15,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
+    if current_user
+      @user = current_user
+    else
+      @user = User.find(params[:id])
+    end
     # stuff for the episodes / shows listing:
     @shows = @user.shows  # find shows with relation to the user (subscribed), returns array
     @episodes = Array.new # instanciate episodes array
@@ -70,7 +74,11 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
-    @user = User.find(params[:id])
+    if current_user
+      @user = current_user
+    else
+      @user = User.find(params[:id])
+    end
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

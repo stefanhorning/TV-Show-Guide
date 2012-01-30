@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :subscribes
+	has_many :subscribes, :dependent => :delete_all
 	has_many :shows, :through => :subscribes
 
 	acts_as_authentic

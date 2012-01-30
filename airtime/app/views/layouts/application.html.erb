@@ -11,12 +11,18 @@
 <div id="wrapper">
 
 <div id="header">
+  <h1>
+      <a id="logo" href="/">
+        <%= image_tag "logo.png" %>
+        <!-- <img src="app/assets/images/logo.png"> -->
+      </a>
+  </h1>
   <div id="user_nav">
     <ul class="left">
       <li> <%= link_to "TV Shows", shows_path %> </li> <!-- | -->
       <% if current_user %>
-        <li> Hello <%= link_to current_user.name, user_path(current_user) %> </li> <!-- | -->
-        <li><%= link_to "Dashboard", user_path(current_user) %> </li> <!-- | -->
+        <li> <%= link_to "Hello "+current_user.name, "/dashboard" %> </li> <!-- | -->
+        <li><%= link_to "Dashboard", "/dashboard" %> </li> <!-- | -->
         <li><%= link_to "Logout", sign_out_path %> </li>
       <% else %>
         <li><%= link_to "Register", new_user_path %></li> <!-- | -->
