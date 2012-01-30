@@ -89,19 +89,41 @@ td {
     margin-right: 10px;
 }
 
+
+
 #show-single{
-  p {
+  padding: 20px 0px 0 0px;
+
+
+  #info {
+    width: 270px;
     float: left;
-    width: 50%;
-    margin: 10px 20px 10px 20px;
+
+    img {
+      margin: 10px;
+    }
+
+    p {
+      float: left;
+      /*width: 50%;*/
+      margin: 10px 20px 10px 20px;
+    }
+
+    p.description {}
   }
 
-  p.description {}
-
   h2.title, h3 {
+      float: left;
+      margin: 15px 20px 20px 20px;
+  }
+
+  .subscription {
     float: left;
-    width: 50%;
-    margin: 15px 20px 20px 20px;
-  }  
+    margin: 20px 0px 0px 30px;
+  }
+  .buttonSubscribe {
+    /*margin: 20px 0px 40px 20px;*/
+  }
+    
 }
 

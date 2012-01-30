@@ -6,3 +6,6 @@
  *= require_tree . 
 */
 
+h2 {
+	font-size: 24px;
+}

@@ -74,11 +74,22 @@ td {
 #coverart {
   margin-right: 10px; }
 
-#show-single p {
-  float: left;
-  width: 50%;
-  margin: 10px 20px 10px 20px; }
-#show-single h2.title, #show-single h3 {
-  float: left;
-  width: 50%;
-  margin: 15px 20px 20px 20px; }
+#show-single {
+  padding: 20px 0px 0 0px; }
+  #show-single #info {
+    width: 270px;
+    float: left; }
+    #show-single #info img {
+      margin: 10px; }
+    #show-single #info p {
+      float: left;
+      /*width: 50%;*/
+      margin: 10px 20px 10px 20px; }
+  #show-single h2.title, #show-single h3 {
+    float: left;
+    margin: 15px 20px 20px 20px; }
+  #show-single .subscription {
+    float: left;
+    margin: 20px 0px 0px 30px; }
+  #show-single .buttonSubscribe {
+    /*margin: 20px 0px 40px 20px;*/ }
