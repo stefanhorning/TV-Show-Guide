@@ -1,17 +1,11 @@
-<table>
-  <tr>
-    <th>TV-Show</th>
-    <th>Description</th>
-    <th>Opening Year</th>
-    <th>Show ID</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
+
+<div class="showlist">
 
 <% @shows.each do |show| %>
-  <tr>
-    <td><%= show.name %></td>
+    <div class="entries">
+    <h1><%= show.name %></h1>
+    <td><%= image_tag("covers/show-"+show.id.to_s+".small.jpg", :alt => "Series Cover") %></td>
     <td><%= show.description %></td>
     <td><%= show.date %></td>
     <td><%= show.id %></td>
@@ -39,5 +33,6 @@
       <% end %>  
     </td>
   </tr>
+  </div>
 <% end %>
-</table>
+</div>
