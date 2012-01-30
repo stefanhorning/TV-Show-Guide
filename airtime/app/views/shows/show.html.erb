@@ -1,20 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h2>TV-Show "<%= @show.name %>"</h2>
+<div id="show-single">
 
 <div id="coverart">
   <%= image_tag("covers/show-"+@show.id.to_s+".jpg", :alt => "Series Cover") %>
 </div>
+
+<h2 class="title"><%= @show.name %></h2>
 
 <p class="description">
   <b>Started on:</b> <%= @show.date.month %>/<%= @show.date.year %><br />
   <b>Description:</b> <%= @show.description %>
 </p>
 
-
+<p class="subscription">
 <% if current_user %>
 <% if Subscribe.where("user_id = ? AND show_id = ?", current_user.id, @show.id).blank? #if no subscription is found %>
-    <p>No subscription yet.</p>
+    No subscription yet.
     <%= link_to 'Subscribe', new_subscribe_path %>
     
     <!-- <%= link_to 'Subscribe#2', subscribes_path(), :method =>"create", :controller=>"subscribes", :user_id => current_user.id, :show_id => @show.id %> -->
@@ -22,24 +24,16 @@
     <% @subscription = Subscribe.find(:all, :conditions => "user_id = "+current_user.id.to_s+" AND show_id = "+@show.id.to_s+"") %>
     <% @one_subscription = @subscription[0] # take first element in result array %>
     <% @sub_id = @one_subscription.id # extract subscription ID %>
-    <p>You already subscribed to this show. Subscription ID: <%= @sub_id.to_s %></p>
+    You have already subscribed to this show.
     <%= link_to 'Unsubscribe', subscribe_path(@sub_id), :confirm => "Are you sure?", :method => :delete %>
 <% end %>
-
 <% end %>
+</p>
 
-<br />
-<br />
-<br />
-<br />
-
-<h3><%= @show.name %> has the following Seasons:</h3>
-<%= render 'seasons/list' %>
+<!-- <h3><%= @show.name %> has the following Seasons:</h3>
+<%= render 'seasons/list' %> -->
 
 
 <h3>Episodes Overview:</h3>
 <%= render 'episodes/list_userview' %>
-
-
-<h3>Following Users have added this Show:</h3>
-<%= render 'users/list' %>
+</div>
