@@ -43,11 +43,7 @@ class SubscribesController < ApplicationController
   # POST /subscribes
   # POST /subscribes.json
   def create
-    if params[:user_id, :show_id]
-      @subscribe = Subscribe.new(params[:user_id, :show_id])
-    else
-      @subscribe = Subscribe.new(params[:subscribe])
-    end
+    @subscribe = Subscribe.new(params[:subscribe])
 
     respond_to do |format|
       if @subscribe.save
