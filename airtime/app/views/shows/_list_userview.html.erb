@@ -1,9 +1,24 @@
-<table>
+
+
+<div class="showlist">
+
 <% @shows.each do |show| %>
-  <tr>
-    <td><%= link_to show.name, show %></td>
-    <td><%= show.description %></td>
-    <td><%= show.date.year %></td>
-  </tr>
+    <div class="entries">
+    <h1><%= link_to show.name, show %></h1>
+    <p class="text"><%= show.description %></p>
+    <p class="date"><%= show.date.year %></p>
+      <% if current_user %>
+        <div class="subscribe-button">
+        <% if Subscribe.where("user_id = ? AND show_id = ?", current_user.id, show.id).blank? #if no subscription is found %>
+          <%= link_to 'Subscribe', new_subscribe_path, :class => "buttonSubscribe" %>
+        <% else %>
+          <% @subscription = Subscribe.find(:all, :conditions => "user_id = "+current_user.id.to_s+" AND show_id = "+show.id.to_s+"") %>
+          <% @one_subscription = @subscription[0] # take first element in result array %>
+          <% @sub_id = @one_subscription.id # extract subscription ID %>
+          <%= link_to 'Unsubscribe', subscribe_path(@sub_id), :confirm => "Are you sure?", :method => :delete, :class => "buttonUnsubscribe" %>
+        <% end %>
+        </div>
+      <% end %>
+  </div>
 <% end %>
-</table>
+</div>
