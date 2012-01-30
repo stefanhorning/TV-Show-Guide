@@ -1,11 +1,10 @@
 
 <div class="episodeslist">
   <% @episodes.each do |episode| %>
-  <div class="entries">
-    <h1><%= episode.date.strftime("%a") %> <%= episode.date.day %>.<%= episode.date.month %>.<%= episode.date.year %></h1>
+  <div class="entries-user">
+    <h2 class="date"><%= episode.date.strftime("%a") %> <!-- <%= episode.date.day %>.<%= episode.date.month %>.<%= episode.date.year %> --></h2>
     <div class="coversmall"><%= image_tag("covers/show-"+episode.season.show.id.to_s+".small.jpg", :alt => "Series Cover") %></div>
-    <h1>S<%= episode.season.number %>E<%= episode.number.to_s %>: <%= link_to episode.name, episode %></h1>
-    <p><%= episode.season.show.name %></p>
+    <h2>S<%= episode.season.number %>E<%= episode.number.to_s %>: <%= link_to ""+episode.season.show.name+" ("+episode.name+")", episode %></h2>
   </div>
 <% end %>
 </div>

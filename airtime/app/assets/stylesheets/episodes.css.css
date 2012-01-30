@@ -1,0 +1,33 @@
+.episodeslist {
+  margin-top: 40px; }
+  .episodeslist p.seasonheader {
+    border-bottom: solid 1px #000; }
+  .episodeslist .entries {
+    background-color: #77d37a;
+    margin-top: 10px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 4px; }
+    .episodeslist .entries h2 {
+      font-size: 26px; }
+    .episodeslist .entries p.date {
+      font-size: 16px; }
+  .episodeslist .entries-user {
+    background-color: #393737;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding-left: 20px;
+    height: 60px; }
+    .episodeslist .entries-user h2 {
+      float: left;
+      color: white; }
+    .episodeslist .entries-user a {
+      color: white; }
+    .episodeslist .entries-user h2.date {
+      width: 80px; }
+    .episodeslist .entries-user .coversmall {
+      float: left; }
+      .episodeslist .entries-user .coversmall img {
+        margin-right: 12px;
+        border-left: solid 4px #fff;
+        border-right: solid 4px #fff; }

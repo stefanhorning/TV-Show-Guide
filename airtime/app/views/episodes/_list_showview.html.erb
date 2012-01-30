@@ -4,8 +4,8 @@
   <% @episodes.each do |episode| %>
   <p class="seasonheader">Season<%= episode.season.number %></p>
   <div class="entries">
-    <h1>Episode<%= episode.number.to_s %>: <%= link_to episode.name, episode %></h1>
-    <p><%= episode.date.day %>.<%= episode.date.month %>.<%= episode.date.year %></p>
+    <h2>Episode<%= episode.number.to_s %>: <%= link_to episode.name, episode %></h2>
+    <p class="date">Airtime: <%= episode.date.day %>.<%= episode.date.month %>.<%= episode.date.year %></p>
   </div>
 <% end %>
 </div>

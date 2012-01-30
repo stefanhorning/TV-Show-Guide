@@ -1,3 +1,66 @@
 // Place all the styles related to the Episodes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.episodeslist{
+    margin-top: 40px;
+    // margin-left: 20px;
+
+    p.seasonheader{
+        border-bottom:solid 1px #000;
+    }
+
+    .entries{
+        background-color: #77d37a;
+        margin-top: 10px;
+        padding: 10px;
+        width: 800px;
+        border-radius: 4px;
+
+        h2{
+          font-size: 26px;
+        }
+
+        p.date{
+            font-size: 16px;
+        }
+    }
+
+
+    .entries-user{
+        background-color: #393737;
+        margin-top: 10px;
+        border-radius: 4px;
+        padding-left: 20px;
+        height: 60px;
+
+        h2{
+            float:left;
+            color: white;
+        }
+
+        a{
+            color: white;
+        }
+
+        h2.date{
+               width: 80px;
+        }
+
+        .coversmall{
+            float:left;
+
+            img{
+                margin-right: 12px;
+                border-left: solid 4px #fff;
+                border-right: solid 4px #fff;
+            }
+        }
+    }
+
+
+
+}

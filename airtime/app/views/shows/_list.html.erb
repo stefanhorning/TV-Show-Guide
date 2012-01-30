@@ -4,7 +4,7 @@
 
 <% @shows.each do |show| %>
     <div class="entries">
-    <h1><%= link_to show.name, show %></h1>
+    <h2><%= link_to show.name, show %></h2>
     <div class="coversmall"><%= image_tag("covers/show-"+show.id.to_s+".small.jpg", :alt => "Series Cover") %></div>
     <p class="text"><%= show.description %></p>
     <p class="date"><%= show.date.year %></p>

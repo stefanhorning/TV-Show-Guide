@@ -94,8 +94,22 @@ td {
 #show-single{
   padding: 20px 0px 0 0px;
 
+  h2.title, h3 {
+      float: left;
+      margin: 15px 20px 20px 20px;
+  }
 
-  #info {
+  .subscription {
+    float: right;
+    margin: 18px 200px 0px 30px;
+  }
+  .buttonSubscribe {
+    /*margin: 20px 0px 40px 20px;*/
+  }
+    
+
+
+#info {
     width: 270px;
     float: left;
 
@@ -110,20 +124,14 @@ td {
     }
 
     p.description {}
-  }
-
-  h2.title, h3 {
-      float: left;
-      margin: 15px 20px 20px 20px;
-  }
-
-  .subscription {
-    float: right;
-    margin: 18px 200px 0px 30px;
-  }
-  .buttonSubscribe {
-    /*margin: 20px 0px 40px 20px;*/
-  }
-    
 }
 
+
+#add_Info{
+    float:left;
+    position: relative;
+    margin-left: 20px;
+}
+
+
+}
