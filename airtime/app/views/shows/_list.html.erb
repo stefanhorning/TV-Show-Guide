@@ -6,21 +6,17 @@
     <div class="entries">
     <h1><%= link_to show.name, show %></h1>
     <div class="coversmall"><%= image_tag("covers/show-"+show.id.to_s+".small.jpg", :alt => "Series Cover") %></div>
-    <p><%= show.description %></p>
-    <p><%= show.date.year %></p>
+    <p class="text"><%= show.description %></p>
+    <p class="date"><%= show.date.year %></p>
 
-    <td>
       <% if can? :update, show %>
-        <%= link_to 'Edit', edit_show_path(show) %>
-      <% end %>  
-    </td>
-    <td>
-      <% if can? :destroy, show %>
-        <%= link_to 'Destroy', show, confirm: 'Are you sure?', method: :delete %>
+        <p class="editlink"><%= link_to 'Edit', edit_show_path(show) %></p>
       <% end %>
-    </td>
-    <td>
+      <% if can? :destroy, show %>
+        <p class="editlink"><%= link_to 'Destroy', show, confirm: 'Are you sure?', method: :delete %></p>
+      <% end %>
       <% if current_user %>
+        <div class="subscribe-button">
         <% if Subscribe.where("user_id = ? AND show_id = ?", current_user.id, show.id).blank? #if no subscription is found %>
           <%= link_to 'Subscribe', new_subscribe_path, :class => "buttonSubscribe" %>
         <% else %>
@@ -29,9 +25,8 @@
           <% @sub_id = @one_subscription.id # extract subscription ID %>
           <%= link_to 'Unsubscribe', subscribe_path(@sub_id), :confirm => "Are you sure?", :method => :delete, :class => "buttonUnsubscribe" %>
         <% end %>
-      <% end %>  
-    </td>
-  </tr>
+        </div>
+      <% end %>
   </div>
 <% end %>
 </div>

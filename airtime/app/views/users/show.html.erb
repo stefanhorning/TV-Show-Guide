@@ -2,27 +2,16 @@
 
 <h2>Dashboard</h2>
 
-<p>
-  <b>Short Name:</b> <%= @user.name %><br />
-  <b>Full Name:</b> <%= @user.fname %> <%= @user.lname %><br />
-  <b>Email:</b> <%= @user.email %><br />
-</p>
-<p>
-  <b>Debugging stuff..</b><br />
-  <b>Login count:</b> <%= @user.login_count %><br />
-  <b>Last request at:</b> <%=h @user.last_request_at %><br />
-  <b>Last login at:</b> <%=h @user.last_login_at %><br />
-  <b>Current login at:</b> <%=h @user.current_login_at %><br />
-  <b>Last login ip:</b> <%=h @user.last_login_ip %><br />
-  <b>Current login ip:</b> <%=h @user.current_login_ip %><br />
-</p>
+<div class="profileinfo">
+  <b>Nickname:</b> <%= @user.name %> | <b>Full Name:</b> <%= @user.fname %> <%= @user.lname %> |  <b>Email:</b> <%= @user.email %> |
+  <%= link_to 'Edit your profile', edit_user_path(@user) %>
+</div>
 
-<%= link_to 'Edit your profile', edit_user_path(@user) %>
+<hr />
 
-<h3>List of subscribed shows (only visible for testing (why?)):</h3>
-<%=  render 'shows/list_userview' %>
+<h3>List of subscribed shows:</h3>
+<%=  render 'shows/list' %>
 <%= link_to 'Subscribe a new show', shows_path %>
-<p>TODO: Delete subscriptions somehow</p>
 
 
 <h3>List of upcoming episodes:</h3>
