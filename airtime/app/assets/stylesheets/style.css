@@ -31,15 +31,20 @@ a#logo {
     float: right; }
   #user_nav li {
     float: left;
-    margin: 0px 10px 0px 0px; }
+    margin: 0px 10px 0px 0px;
+    font-size: 18px;
+    color: #ffffff; }
     #user_nav li a {
-      /*font-weight: bold;*/
-      font-size: 18px;
-      color: white;
+      font-weight: bold;
+      color: #ffffff;
       text-decoration: none; }
       #user_nav li a:hover {
         text-decoration: underline;
         background-color: none; }
+      #user_nav li a:active {
+        text-decoration: underline; }
+    #user_nav li .user {
+      font-style: italic; }
 
 a.buttonSubscribe {
   background: #589c00;

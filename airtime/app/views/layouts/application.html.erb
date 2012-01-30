@@ -21,7 +21,7 @@
     <ul class="left">
       <li> <%= link_to "TV Shows", shows_path %> </li> <!-- | -->
       <% if current_user %>
-        <li> <%= link_to "Hello "+current_user.name, "/dashboard" %> </li> <!-- | -->
+        <li class="user" style="font-style: italic;" > <%= "Hello "+current_user.name %> </li> <!-- | -->
         <li><%= link_to "Dashboard", "/dashboard" %> </li> <!-- | -->
         <li><%= link_to "Logout", sign_out_path %> </li>
       <% else %>
