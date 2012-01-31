@@ -97,3 +97,24 @@ td {
     float: left;
     position: relative;
     margin-left: 20px; }
+
+.showlist .entries {
+  background-color: #393737;
+  margin-bottom: 10px;
+  color: #e8e8e8;
+  padding: 8px;
+  border-radius: 4px;
+  height: 60px; }
+  .showlist .entries a {
+    color: #e8e8e8; }
+  .showlist .entries h2 {
+    margin-right: 10px;
+    float: left; }
+  .showlist .entries .subscribe-button {
+    float: right; }
+  .showlist .entries .coversmall {
+    padding-bottom: 16px;
+    float: left; }
+    .showlist .entries .coversmall img {
+      /* float: right; */
+      margin-right: 10px; }

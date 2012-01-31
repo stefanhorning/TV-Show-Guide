@@ -135,3 +135,49 @@ td {
 
 
 }
+
+
+.showlist{
+
+    .entries{
+        background-color: #393737;
+        margin-bottom: 10px;
+        color: #e8e8e8;
+        padding: 8px;
+        border-radius: 4px;
+        height: 60px;
+
+        a{
+            color: #e8e8e8;
+        }
+
+
+
+        h2{
+           margin-right: 10px;
+           float:left;
+        }
+
+         .subscribe-button{
+              float:right;
+        }
+
+        .coversmall{
+            padding-bottom: 16px;
+            float: left;
+
+
+            img{
+              /* float: right; */
+
+              margin-right: 10px;
+            }
+        }
+
+
+        p.text{
+
+        }
+
+    }
+}

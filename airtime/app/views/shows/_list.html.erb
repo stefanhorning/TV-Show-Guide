@@ -4,11 +4,8 @@
 
 <% @shows.each do |show| %>
     <div class="entries">
-    <h2><%= link_to show.name, show %></h2>
     <div class="coversmall"><%= image_tag("covers/show-"+show.id.to_s+".small.jpg", :alt => "Series Cover") %></div>
-    <p class="text"><%= show.description %></p>
-    <p class="date"><%= show.date.year %></p>
-
+    <h2><%= link_to ""+show.name+" ("+show.date.year.to_s+")", show %></h2>
       <% if can? :update, show %>
         <p class="editlink"><%= link_to 'Edit', edit_show_path(show) %></p>
       <% end %>
@@ -27,6 +24,7 @@
         <% end %>
         </div>
       <% end %>
+     <p class="text"><%= show.description %></p>
   </div>
 <% end %>
 </div>
