@@ -145,13 +145,11 @@ td {
         color: #e8e8e8;
         padding: 8px;
         border-radius: 4px;
-        height: 60px;
+        min-height: 60px;
 
         a{
             color: #e8e8e8;
         }
-
-
 
         h2{
            margin-right: 10px;
@@ -176,7 +174,9 @@ td {
 
 
         p.text{
-
+            clear:both;
+            font-size: 16px;
+            margin-left: 50px;
         }
 
     }

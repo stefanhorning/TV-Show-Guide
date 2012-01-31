@@ -104,7 +104,7 @@ td {
   color: #e8e8e8;
   padding: 8px;
   border-radius: 4px;
-  height: 60px; }
+  min-height: 60px; }
   .showlist .entries a {
     color: #e8e8e8; }
   .showlist .entries h2 {
@@ -118,3 +118,7 @@ td {
     .showlist .entries .coversmall img {
       /* float: right; */
       margin-right: 10px; }
+  .showlist .entries p.text {
+    clear: both;
+    font-size: 16px;
+    margin-left: 50px; }
